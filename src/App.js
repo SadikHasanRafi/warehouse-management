@@ -8,6 +8,7 @@ import Home from './Components/Home/Home';
 import ManageItem from './Components/ManageItem/ManageItem';
 import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
+import UpdateItem from './Components/UpdateItem/UpdateItem';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<FourOfour></FourOfour>}></Route>
         <Route path='additem' element={<AddItem></AddItem>}></Route>
+        <Route path='updateitem' element={<UpdateItem></UpdateItem>}></Route>
         {/* Not used path */}
         <Route path='construction' element={<FourOfour></FourOfour>}></Route>
       </Routes>

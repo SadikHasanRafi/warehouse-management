@@ -10,7 +10,9 @@ const AddItem = () => {
             <input type="text" placeholder="Name" id="" />
             <input type="text" placeholder="Price" id="" />
             <input type="text" placeholder="Supplier Name" id="" />
-            <input type="text" name="img" id="" value="image url"/>
+            <input type="text" name="img" id="" value="Image url"/>
+            <input type="number" placeholder='Quantity' id="" />
+
             <br />
             <p>Is the order pending or comepted</p>
             <br />
