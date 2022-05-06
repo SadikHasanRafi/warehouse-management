@@ -6,6 +6,8 @@ import Footer from '../Footer/Footer';
 import Inventory from '../Inventory/Inventory';
 import PendingDelevary from '../PendingDelevary/PendingDelevary';
 import PendingOrder from '../PendingOrder/PendingOrder';
+import Product from '../Product/Product';
+import Products from '../Products/Products';
 
 
 const Home = () => {
@@ -22,9 +24,12 @@ const Home = () => {
 
 
             {/* Inventory section */}
+             {/* Show 3 or 4 product and a see all button */}
             <Inventory></Inventory>
             <hr />
 
+
+           
 
             {/* Pending order list */}
             <PendingOrder></PendingOrder>
