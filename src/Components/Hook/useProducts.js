@@ -3,17 +3,17 @@ import React, { useEffect, useState } from 'react'
 
 function useProducts(props) {
 
-    let token = props
+    let token = props[0]
+    let p = props[1]
    
     const [product, setProduct] = useState([])
 
     useEffect(()=>{
         // console.log(token)
         if (token==='addItem') {
-            Axios.get('fakeDB.json').then(res => {
+            Axios.post('http://localhost:5000/addproduct').then(res => {
                 setProduct(res)
                 console.log(token)
-                
             })
         }
 

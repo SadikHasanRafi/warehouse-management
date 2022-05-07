@@ -3,17 +3,30 @@ import useProducts from '../Hook/useProducts';
 
 const AddItem = () => {
 
-    const [product] = useProducts('addItem')
+    useProducts('addItem',product)
 
     const handleAddProduct = event => {
         event.preventDefault()
-        const name = event.target.name.value;
-        const price = event.target.price.value;
-        const supplier = event.target.supplier.value;
-        const pic = event.target.pic.value;
-        const quantity = event.target.quantity.value;
+
+        const product = {
+            name : event.target.name.value,
+            price : event.target.price.value,
+            supplier : event.target.supplier.value,
+            pic : event.target.pic.value,
+            quantity : event.target.quantity.value
+        }
+
+        // const name = event.target.name.value;
+        // const price = event.target.price.value;
+        // const supplier = event.target.supplier.value;
+        // const pic = event.target.pic.value;
+        // const quantity = event.target.quantity.value;
+        //const product{name,price,supplier,pic,quantity};
+        console.log(name)
         
     }
+
+    
     return (
         <div>
             <h1>Add item page</h1>
