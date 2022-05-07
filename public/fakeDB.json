@@ -1,0 +1,36 @@
+[   
+    {
+        "id": 1,
+        "name": "MSI 5500 xt",
+        "pic":"https://www.startech.com.bd/image/cache/catalog/graphics-card/msi/rx-6500-xt-mech-2x-4g-oc/rx-6500-xt-mech-2x-4g-oc-01-500x500.jpg",
+        "price":23000 ,
+        "des": "The MSI Radeon RX 6500 XT MECH 2X 4G OC GDDR6 Graphics Card offers the performance to dominate your game. It is powered by AMD RDNA 2 architecture, featuring 40 powerful enhanced Compute Units, the all-new AMD Infinity Cache" ,
+        "supplier":"Russia",
+        "quantity":"80",
+        "delevaryStatus":true ,
+        "orderStatus": false ,   
+    },
+    {
+        "id": 2,
+        "name": "Asus 3070",
+        "pic": "https://www.startech.com.bd/image/cache/catalog/graphics-card/asus/rtx3070/rtx3070-001-500x500.jpg",
+        "price": 45000,
+        "des": "It can speedup to 45fps",
+        "supplier": "Indoneshia",
+        "quantity": 12,
+        "delevaryStatus": false,
+        "orderStatus":true         
+    },
+    {
+        "id": 3,
+        "name": "Gigabyte 2060ti",
+        "pic":"https://www.startech.com.bd/image/cache/catalog/graphics-card/gigabyte/rtx-2060-d6-12g/rtx-2060-d6-12g-01-500x500.jpg",
+        "price":59000 ,
+        "des": "The latest price of Gigabyte GeForce RTX 2060 D6 12GB Graphics Card in Bangladesh is 59,000৳. You can buy the Gigabyte GeForce RTX 2060 D6 12GB Graphics Card at best price from our website or visit any of our showrooms.",
+        "supplier":"Australia",
+        "quantity":40,
+        "delevaryStatus": false,
+        "orderStatus": true       
+    }
+   
+]

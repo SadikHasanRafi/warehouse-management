@@ -1,28 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useProducts from '../Hook/useProducts';
 
-const Product = () => {
-    const url = 'https://www.startech.com.bd/image/cache/catalog/graphics-card/zotac/gtx-1660-super/geforce-gtx-1660-super-500x500.jpg';
-    const product = {
-        name:'keyboard',
-        pic: url,
-        price:23000,
-        des:"it is a good gpu",
-        supplier:"canada",
-        _id:456,
-        quantity:50,
-        deliveryStatus:false
-    }
+const Product = (props) => {
+
+    console.log(props)
+    const {pic,name,price,supplier,quantity,des,deliveryStatus} = props.product
+    
+
+//     <Link
+//     style={{ position: "absolute", inset: 0 }}
+//     to={`/sneakers/${snkr.id}`}
+//   >
+//     <VisuallyHidden>{name}</VisuallyHidden>
+//   </Link>
+
+
 
     return (
         <div style={{border:'3px solid'}}>
-            <img src={product.pic} alt="" />
-            <h1>Name: {product.name}</h1>
-            <h2>Price: {product.price}</h2>
-            <p>Supplier: {product.supplier}</p>
-            <p>Quantity: {product.quantity}</p>
-            <p>Delivery Status: {toString(product.deliveryStatus)}</p>
-            <p>{product.des}</p>
+            
+            <img src={pic} alt="" />
+            <h1>Name: {name}</h1>
+            <h2>Price: {price}</h2>
+            <p>Supplier: {supplier}</p>
+            <p>Quantity: {quantity}</p>
+            <p>Delivery Status: {toString(deliveryStatus)}</p>
+            <p>{des}</p>
 
             <Link to='/updateitem'><button>Update</button></Link>
 

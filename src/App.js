@@ -6,6 +6,7 @@ import FourOfour from './Components/FourOfour/FourOfour';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import ManageItem from './Components/ManageItem/ManageItem';
+import Products from './Components/Products/Products';
 import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
 import UpdateItem from './Components/UpdateItem/UpdateItem';
@@ -23,10 +24,12 @@ function App() {
         <Route path='*' element={<FourOfour></FourOfour>}></Route>
         <Route path='additem' element={<AddItem></AddItem>}></Route>
         <Route path='updateitem' element={<UpdateItem></UpdateItem>}></Route>
+        <Route path='manageitem/:id' element={<Products ></Products>}></Route>
         {/* Not used path */}
         <Route path='construction' element={<FourOfour></FourOfour>}></Route>
       </Routes>
       {/* update Item page is avaiable */}
+      
     </div>
   );
 }
