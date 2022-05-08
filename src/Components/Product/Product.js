@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Product = () => {
+const Product = (props) => {
 
    
-    
+    const {name, price, description, pic} = props.product
 
 //     <Link
 //     style={{ position: "absolute", inset: 0 }}
@@ -17,18 +17,11 @@ const Product = () => {
 
 
     return (
-        <div style={{border:'3px solid'}}>
-{/*             
-            <img src={pic} alt="" />
-            <h1>Name: {name}</h1>
-            <h2>Price: {price}</h2>
-            <p>Supplier: {supplier}</p>
-            <p>Quantity: {quantity}</p>
-            <p>Delivery Status: {toString(deliveryStatus)}</p>
-            <p>{des}</p>
-
-            <Link to='/updateitem'><button>Update</button></Link> */}
-
+            <div className='flex flex-col items-center w-2/12 border p-5'>
+                <img className='w-6/12' srcSet={pic}  />
+                <p className='font-bold text-xl'>{name}</p>
+                <p> Price: {price}</p>
+                <p>description {description.slice(0, 100)}</p>
         </div>
     );
 };

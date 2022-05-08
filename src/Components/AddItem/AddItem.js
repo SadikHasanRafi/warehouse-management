@@ -1,16 +1,10 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
-import useProducts from '../Hook/useProducts';
 
 const AddItem = () => {
 
     
-        // he told to that once i start using vim I will never quite from that. I didn't understand that he was talking about my inability.
-        
     
-    useEffect( () => {
-
-    },[])
     
 
     const handleAddProduct = event => {
@@ -25,7 +19,12 @@ const AddItem = () => {
             quantity : event.target.quantity.value
         }
         axios.post('http://localhost:5000/addproduct',product)
-        .then(res => console.log(res.data.succes))
+        .then(res => {
+            console.log(res.data.succes)
+            if(res.data.succes === true){
+                alert("Item added")
+            }
+        })
     }
 
     

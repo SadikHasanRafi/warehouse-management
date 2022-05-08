@@ -1,19 +1,34 @@
-import  Axios  from 'axios';
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import Product from '../Product/Product';
 
 const Products = () => {
 
-   
+   //data api -->
+   //http://localhost:5000/showallproduct
+
+   const [products, setProducts] = useState([])
+// console.log(products)
+   useEffect(()=>{
+
+        axios.get("http://localhost:5000/showallproduct")
+        .then(res => setProducts(res.data))
+       
+        // products = products.data
+   },[])
 
 
     return (
-        <div>
-            <h1>this is products page for test</h1>
-            <Product></Product>
-            <Product></Product>
-            <Product></Product>
+        <div className='flex justify-evenly flex-wrap'>
+        
+            {
+                products.map(product => <Product 
+                    product = {product} 
+                    key = {product._id}
+                    ></Product> )
+                
+            }
         </div>
     );
 };

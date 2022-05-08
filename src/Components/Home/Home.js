@@ -20,6 +20,7 @@ const Home = () => {
             {/* Inventory section */}
              {/* Show 3 or 4 product and a see all button */}
             <Inventory></Inventory>
+            
 
 
            

@@ -7,7 +7,7 @@
         "des": "The MSI Radeon RX 6500 XT MECH 2X 4G OC GDDR6 Graphics Card offers the performance to dominate your game. It is powered by AMD RDNA 2 architecture, featuring 40 powerful enhanced Compute Units, the all-new AMD Infinity Cache" ,
         "supplier":"Russia",
         "quantity":"80",
-        "delevaryStatus":true ,
+        "deliveryStatus":true ,
         "orderStatus": false  
     },
     {
@@ -18,7 +18,7 @@
         "des": "It can speedup to 45fpsmmmmmmmmmomjkhhhhhhnnnhhhhhhhhhhhggggg8u f98yu 7yyyyyyyyyyyyyyyyyyyyyyyygi7yggggg ggggggggggggggggggggg",
         "supplier": "Indoneshia",
         "quantity": 12,
-        "delevaryStatus": false,
+        "deliveryStatus": false,
         "orderStatus":true         
     },
     {
@@ -29,7 +29,7 @@
         "des": "The latest price of Gigabyte GeForce RTX 2060 D6 12GB Graphics Card in Bangladesh is 59,000৳. You can buy the Gigabyte GeForce RTX 2060 D6 12GB Graphics Card at best price from our website or visit any of our showrooms.",
         "supplier":"Australia",
         "quantity":40,
-        "delevaryStatus": false,
+        "deliveryStatus": false,
         "orderStatus": true       
     }
    
