@@ -6,7 +6,7 @@ import FourOfour from './Components/FourOfour/FourOfour';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import ManageItem from './Components/ManageItem/ManageItem';
-import MyItem from './Components/MyItem/MyItem';
+import MyItem from './Components/MyItem/Myitem';
 import Products from './Components/Products/Products';
 import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';

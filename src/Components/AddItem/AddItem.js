@@ -1,9 +1,17 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect } from 'react';
 import useProducts from '../Hook/useProducts';
 
 const AddItem = () => {
 
-    useProducts('addItem',product)
+    
+        // he told to that once i start using vim I will never quite from that. I didn't understand that he was talking about my inability.
+        
+    
+    useEffect( () => {
+
+    },[])
+    
 
     const handleAddProduct = event => {
         event.preventDefault()
@@ -13,16 +21,18 @@ const AddItem = () => {
             price : event.target.price.value,
             supplier : event.target.supplier.value,
             pic : event.target.pic.value,
+            description : event.target.description.value,
             quantity : event.target.quantity.value
         }
-
+        axios.post('http://localhost:5000/addproduct',product)
+        .then(res => console.log(res.data.succes))
         // const name = event.target.name.value;
         // const price = event.target.price.value;
         // const supplier = event.target.supplier.value;
         // const pic = event.target.pic.value;
         // const quantity = event.target.quantity.value;
         //const product{name,price,supplier,pic,quantity};
-        console.log(name)
+        
         
     }
 
@@ -37,6 +47,7 @@ const AddItem = () => {
                 <input type="text" placeholder="Name" id="name" required />
                 <input type="text" placeholder="Price" id="price" required/>
                 <input type="text" placeholder="Supplier Name" id="supplier" required/>
+                <input type="text" placeholder="Description" id="description" required/>
                 <input type="text" placeholder="Image url" id="pic" required/>
                 <input type="number" placeholder='Quantity' min={1} id="quantity" required/>
 
