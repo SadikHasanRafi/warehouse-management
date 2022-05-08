@@ -2,11 +2,11 @@ import React from 'react';
 
 const SignIn = () => {
     return (
-        <div>
-            <input type="email" placeholder='Email' />
-            <input type="password" placeholder='Password' />
-            <input type="button" value="Sign in" />
-            <input type="button" value="Sign in by Google" />
+        <div className='flex flex-col justify-center items-center' style={{height: "60vh"}}>
+            <input type="email" placeholder='Email'  className='w-3/12'/>
+            <input type="password" placeholder='Password'  className='w-3/12'/>
+            <input type="button" className='bg-green-500 p-2 w-3/12' value="Sign in" />
+            <input type="button" className='bg-green-500 p-2 w-3/12' value="Sign in by Google" />
         </div>
     );
 };

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Product from '../Product/Product';
+import Products from '../Products/Products';
 
 const Inventory = () => {
     return (
-        <div>
+        <div className='h-screen text-center'>
             <h1>this is inventory</h1>
             {/* show here 3-6 cards  */}
-            <Product></Product>
+            <Products></Products>
             <Link to='manageitem'> <input type="button" value="Show All" /> </Link>
         </div>
     );
