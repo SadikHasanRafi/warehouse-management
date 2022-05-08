@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
-        <div>
-            <input type="text" placeholder='Name'/>
-            <input type="email" placeholder='Email' />
-            <input type="password" placeholder='Password' />
-            <input type="button" value="Sign up" />
+        <div className='flex flex-col justify-center items-center' style={{height: "60vh"}}>
+            <input type="text" placeholder='Name' className='p-3 border w-3/12'/>
+            <input type="email" placeholder='Email' className='p-3 border w-3/12' />
+            <input type="password" placeholder='Password' className='p-3 border w-3/12'/>
+            <input type="button" className='m-3 bg-green-500 p-3 text-white w-3/12' value="Sign Up" />
 
-            <p>OR</p>
+            <p className='m-3'>OR</p>
 
-            <input type="button" value='Google sign up' />
+            <input type="button" value='Google sign up' className='bg-amber-500 p-3 text-white w-3/12'/>
             
         </div>
     );

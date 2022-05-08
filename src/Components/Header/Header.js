@@ -7,7 +7,7 @@ const Header = () => {
         <div>
             <nav className='flex justify-evenly p-7'>
                 {/* logo */}
-                <li className='list-none'><Link to='/'> <span className="material-icons ">warehouse</span> </Link></li>
+                <Link to='/'><li className='flex items-center list-none'> <span className="material-icons mr-3 text-green-500">warehouse</span>Ware House</li></Link>
                 
                 
                 <ul className='flex justify-evenly w-4/12'>

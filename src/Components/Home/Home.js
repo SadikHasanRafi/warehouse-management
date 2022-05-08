@@ -15,28 +15,15 @@ const Home = () => {
         <div>
             {/* Banner */}
             <Banner></Banner>
-
-
             {/* Inventory section */}
              {/* Show 3 or 4 product and a see all button */}
             <Inventory></Inventory>
-            
-
-
-           
-
             {/* Pending order list */}
             <PendingOrder></PendingOrder>
-
-
             {/* Pending Delevary list*/}
             <PendingDelivery></PendingDelivery>
-
-
             {/* Footer */}
             <Footer></Footer>
-
-
         </div>
     );
 };
