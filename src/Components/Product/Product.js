@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Product = (props) => {
 
    
-    const {name, price, description, pic} = props.product
+    const {name, price, description, pic,_id} = props.product
 
-//     <Link
-//     style={{ position: "absolute", inset: 0 }}
-//     to={`/sneakers/${snkr.id}`}
-//   >
-//     <VisuallyHidden>{name}</VisuallyHidden>
-//   </Link>
+    // const navigate = useNavigate();
+    
 
+    // const handleUpdate = (_id) => {
+    //     const path = `` 
+          
+    // }
 
 
     return (
@@ -22,6 +22,7 @@ const Product = (props) => {
                 <p className='font-bold text-xl'>{name}</p>
                 <p> Price: {price}</p>
                 <p>description {description.slice(0, 100)}</p>
+                <Link to={`/product/${_id}`}><button className='border' >Update</button></Link>
         </div>
     );
 };

@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AddItem from '../AddItem/AddItem';
-
-import Product from '../Product/Product';
 import Products from '../Products/Products';
 
 const ManageItem = () => {
