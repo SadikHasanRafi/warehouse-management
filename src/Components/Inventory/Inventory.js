@@ -11,18 +11,19 @@ const Inventory = () => {
 
     useEffect(()=>{
 
-        axios.get("http://localhost:5000/showallproduct")
+        axios.get("http://localhost:5000/showproduct")
         .then(res => setProducts(res.data))
        
         // products = products.data
    },[])
 
     return (
-        <div className='h-screen text-center'>
-            <h1 className='text-2xl mb-10'>Inventory</h1>
+        <div className="flex justify-center  items-center md:mt-24 md:h-screen" style={{height: "70vh"}}>
+        <div className='w-7/12 flex flex-col items-center md:w-screen' >
+            <h1 className='text-2xl text-center mb-10'>Inventory</h1>
             {/* show here 3-6 cards  */}
 
-            <div className='flex justify-evenly'>
+            <div className='grid grid-cols-3 gap-11'>
             {
                 productsWithSlice.map(product => <Product 
                     product = {product} 
@@ -32,6 +33,7 @@ const Inventory = () => {
             }
             </div>
             <Link to='manageitem'> <input type="button" className='bg-green-500 p-3 text-white mt-16 px-5' value="Show All" /> </Link>
+        </div>
         </div>
     );
 };

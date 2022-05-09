@@ -11,6 +11,7 @@ import Products from './Components/Products/Products';
 import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
 import UpdateItem from './Components/UpdateItem/UpdateItem';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         {/* Not used path */}
         <Route path='construction' element={<FourOfour></FourOfour>}></Route>
       </Routes>
+      <Footer></Footer>
       {/* update Item page is avaiable */}
       
     </div>

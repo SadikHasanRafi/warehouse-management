@@ -28,11 +28,11 @@ const UpdateItem = () => {
             <br />
             <p>Is the order pending or comepted</p>
             <br />
-            <input type='radio' name='delevary_stat' id='delevary' ></input>
-            <label htmlFor="pending" >Pending delevary</label>
+            <input type='radio' name='delivery_stat' id='delivery' ></input>
+            <label htmlFor="pending" >Pending delivery</label>
             <br />
-            <input type='radio' name='delevary_stat' id='delevary' ></input>
-            <label htmlFor="done" >Complete delevary</label>
+            <input type='radio' name='delivery_stat' id='delivery' ></input>
+            <label htmlFor="done" >Complete delivery</label>
 
             <br />
             <input type="button" value="Update item" />

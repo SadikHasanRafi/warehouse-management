@@ -20,7 +20,7 @@ const Products = () => {
 
 
     return (
-        <div className='flex justify-evenly flex-wrap'>
+        <div className='grid grid-cols-3 gap-11'>
         
             {
                 products.map(product => <Product 

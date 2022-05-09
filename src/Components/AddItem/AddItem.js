@@ -30,7 +30,7 @@ const AddItem = () => {
     
     return (
         <div>
-            <div className="flex justify-center items-center" style={{height: "90vh"}}>
+            <div className="flex justify-center mt-16">
             <form className='w-4/12' onSubmit={handleAddProduct} >
 
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PendingDelevary = () => {
+const PendingDelivery = () => {
     return (
-        <div>
-            <h1>If the product mark as pending delevary then it will be add here</h1>
-            <Link to='/construction'><button>See all pending delevary list</button></Link>
+        <div className='flex flex-col items-center justify-center' style={{height: "20vh"}}>
+            <h1>If the product mark as pending delivery then it will be add here</h1>
+            <Link to='/construction'><button className='bg-green-500 text-white p-2 px-5 mt-5'>See all pending delivery list</button></Link>
         </div>
     );
 };
 
-export default PendingDelevary;
+export default PendingDelivery;
