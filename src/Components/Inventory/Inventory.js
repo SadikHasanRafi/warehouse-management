@@ -18,7 +18,7 @@ const Inventory = () => {
    },[])
 
     return (
-        <div className="flex justify-center  items-center md:mt-24 md:h-screen" style={{height: "70vh"}}>
+        <div className="flex justify-center md:mt-14">
         <div className='w-7/12 flex flex-col items-center md:w-screen' >
             <h1 className='text-2xl text-center mb-10'>Inventory</h1>
             {/* show here 3-6 cards  */}

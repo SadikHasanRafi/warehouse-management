@@ -4,14 +4,14 @@ import Blog from './Components/Blog/Blog';
 import FourOfour from './Components/FourOfour/FourOfour';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
-import IndivisualProduct from './Components/IndivisualProduct/IndivisualProduct';
 import ManageItem from './Components/ManageItem/ManageItem';
 import MyItem from './Components/MyItem/Myitem';
+import Product from './Components/Product/Product';
 import Products from './Components/Products/Products';
 import SignIn from './Components/SignIn/SignIn';
 import SignUp from './Components/SignUp/SignUp';
 import UpdateItem from './Components/UpdateItem/UpdateItem';
-import Footer from './Components/Footer/Footer';
+import UpdateProduct from './Components/UpdateProduct/UpdateProduct';
 
 function App() {
   return (
@@ -24,15 +24,17 @@ function App() {
         <Route path='myitem' element={<MyItem></MyItem>}></Route>
         <Route path='signin' element={<SignIn></SignIn>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
-        <Route path='product/:id' element={<IndivisualProduct></IndivisualProduct>}></Route>
+        
         <Route path='*' element={<FourOfour></FourOfour>}></Route>
         <Route path='additem' element={<AddItem></AddItem>}></Route>
         <Route path='updateitem' element={<UpdateItem></UpdateItem>}></Route>
-        <Route path='manageitem' element={<Products ></Products>}></Route>
+        {/* <Route path='manageitem' element={<Products ></Products>}></Route> */}
+        
+        <Route path='manageitem/:_id' element={<UpdateProduct></UpdateProduct>}></Route>
+
         {/* Not used path */}
         <Route path='construction' element={<FourOfour></FourOfour>}></Route>
       </Routes>
-      <Footer></Footer>
       {/* update Item page is avaiable */}
       
     </div>

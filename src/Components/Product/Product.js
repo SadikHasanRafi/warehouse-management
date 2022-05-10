@@ -1,19 +1,20 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 
 const Product = (props) => {
-
-   
-    const {name, price, description, pic,_id} = props.product
-
-    // const navigate = useNavigate();
+    
+    const {name,price,pic,quantity,_id} = props.product
+    
+    const id = useParams()
     
 
-    // const handleUpdate = (_id) => {
-    //     const path = `` 
-          
-    // }
+    // const [product,setProduct] = useState()
+
+    // console.log(product)
+
+  
 
 
     return (
@@ -21,8 +22,10 @@ const Product = (props) => {
                 <img className='w-6/12' srcSet={pic}  />
                 <p className='font-bold text-xl'>{name}</p>
                 <p> Price: {price}</p>
-                <p>description {description.slice(0, 100)}</p>
-                <Link to={`/product/${_id}`}><button className='border mt-10 p-3 px-5 bg-green-500 text-white'>Update</button></Link>
+                <p> Quantity: {quantity}</p>
+                
+                
+                <Link to={`/manageitem/${_id}`}><button className='border mt-10 p-3 px-5 bg-green-500 text-white'>Update</button></Link>
         </div>
     );
 };

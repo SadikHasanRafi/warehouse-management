@@ -1,13 +1,8 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import Banner from '../Banner/Banner';
+import Footer from '../Footer/Footer';
 import Inventory from '../Inventory/Inventory';
 import PendingDelivery from '../PendingDelivery/PendingDelivery';
 import PendingOrder from '../PendingOrder/PendingOrder';
-import Product from '../Product/Product';
-import Products from '../Products/Products';
-
 
 const Home = () => {
     return (
@@ -21,6 +16,7 @@ const Home = () => {
             {/* Pending delivery list*/}
             <PendingDelivery></PendingDelivery>
             {/* Footer */}
+            <Footer></Footer>
         </div>
     );
 };

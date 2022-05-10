@@ -13,7 +13,10 @@ const Products = () => {
    useEffect(()=>{
 
         axios.get("http://localhost:5000/showproduct")
-        .then(res => setProducts(res.data))
+        .then(res => {
+            setProducts(res.data)
+            console.log(res.data)
+        })
        
         // products = products.data
    },[])
@@ -27,7 +30,6 @@ const Products = () => {
                     product = {product} 
                     key = {product._id}
                     ></Product> )
-                
             }
         </div>
     );
