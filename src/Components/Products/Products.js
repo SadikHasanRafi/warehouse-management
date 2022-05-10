@@ -6,13 +6,13 @@ import Product from '../Product/Product';
 const Products = () => {
 
    //data api -->
-   //http://localhost:5000/showallproduct
+   //https://immense-sierra-17813.herokuapp.com/showallproduct
 
    const [products, setProducts] = useState([])
 // console.log(products)
    useEffect(()=>{
 
-        axios.get("http://localhost:5000/showproduct")
+        axios.get("https://immense-sierra-17813.herokuapp.com/showproduct")
         .then(res => {
             setProducts(res.data)
             console.log(res.data)

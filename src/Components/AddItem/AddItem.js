@@ -18,7 +18,7 @@ const AddItem = () => {
             description : event.target.description.value,
             quantity : event.target.quantity.value
         }
-        axios.post('http://localhost:5000/addproduct',product)
+        axios.post('https://immense-sierra-17813.herokuapp.com/addproduct',product)
         .then(res => {
             console.log(res.data.succes)
             if(res.data.succes === true){

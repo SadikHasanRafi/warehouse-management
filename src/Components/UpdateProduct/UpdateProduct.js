@@ -6,7 +6,7 @@ const UpdateProduct = () => {
     
   
     const id = useParams()
-    const url = `http://localhost:5000/showproductdetails/${id._id}`
+    const url = `https://immense-sierra-17813.herokuapp.com/showproductdetails/${id._id}`
     
     const [ product, setProduct ] = useState()
     
@@ -55,7 +55,7 @@ const UpdateProduct = () => {
         console.log(updatedCurrentQuantity)
         const data = {quantity: updatedCurrentQuantity}
         console.log(data)
-        axios.put(`http://localhost:5000/product/${id._id}`,data)
+        axios.put(`https://immense-sierra-17813.herokuapp.com/product/${id._id}`,data)
         .then( res => console.log(res))
     } 
 

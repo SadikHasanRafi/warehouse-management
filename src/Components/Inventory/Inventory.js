@@ -11,7 +11,7 @@ const Inventory = () => {
 
     useEffect(()=>{
 
-        axios.get("http://localhost:5000/showproduct")
+        axios.get("https://immense-sierra-17813.herokuapp.com/showproduct")
         .then(res => setProducts(res.data))
        
         // products = products.data

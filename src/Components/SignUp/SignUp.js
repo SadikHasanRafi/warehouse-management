@@ -1,7 +1,8 @@
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import app from '../../firebase.init';
+import useGoogleSignInSignUp from '../Hook/useGoogleSignInSignUp';
 
 const SignUp = () => {
 
@@ -44,6 +45,11 @@ const SignUp = () => {
 
 
         //Google based signup
+        const [result,setResult] = useGoogleSignInSignUp([])
+        const handleGoogleSignUp = event => {
+            
+        }
+        
     }
 
     return (
@@ -55,7 +61,7 @@ const SignUp = () => {
 
             <p className='m-3'>OR</p>
 
-            <input type="button" value='Google sign up' className='bg-amber-500 p-3 text-white w-3/12'/>
+            <input type="button" onClick={(handleGoogleSignUp)} value='Google sign up' className='bg-amber-500 p-3 text-white w-3/12'/>
             
         </div>
     );
