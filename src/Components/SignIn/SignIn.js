@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import app from '../../firebase.init';
 
 
 const SignIn = () => {
@@ -15,18 +16,28 @@ const SignIn = () => {
         setPassword(event.target.value)
     }
 
+    //email password based sign in 
+    const auth = getAuth(app);
     const handleEmailPasswordClick = event => {
         // event.target.value === 'Sign In'
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user)
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode,errorMessage)
+        });
     }
     
-
-    // password mail based authentication 
-    const auth = getAuth();
-    
+   
 
 
 
     //gmail authentication
+    
 
 
     return (

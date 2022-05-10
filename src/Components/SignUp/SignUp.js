@@ -41,6 +41,9 @@ const SignUp = () => {
             const errorMessage = error.message;
             console.log(errorCode,errorMessage)
         });
+
+
+        //Google based signup
     }
 
     return (
