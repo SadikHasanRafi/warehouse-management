@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import app from '../../firebase.init';
 import useFirebase from '../Hook/useFirebase';
+import useEmailPasswordAuth from '../Hook/useEmailPasswordAuth';
 
 
 const SignIn = () => {
@@ -10,7 +11,10 @@ const SignIn = () => {
     const auth = getAuth(app)
 
     //firebase hook call
-    const {  googleSignIn } = useFirebase
+    const {  googleSignIn } = useFirebase()
+
+    //email password hook call
+    const { emailPasswordSignIn } = useEmailPasswordAuth()
 
 
     //Taking email input
@@ -26,7 +30,7 @@ const SignIn = () => {
 
     //email password based sign in 
     const handleEmailPasswordClick = event => {
-        
+        emailPasswordSignIn(auth, email, password)
     }
  
 

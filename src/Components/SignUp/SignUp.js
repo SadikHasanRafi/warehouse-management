@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWith
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import app from '../../firebase.init';
+import useEmailPasswordAuth from '../Hook/useEmailPasswordAuth';
 import useFirebase from '../Hook/useFirebase';
 
 
@@ -9,7 +10,7 @@ const SignUp = () => {
 
     const auth = getAuth(app)
     const {  googleSignUp } = useFirebase()
-    
+    const { emailPasswordSignUp } = useEmailPasswordAuth()
      //Taking name input
     const [name,setName] = useState('') 
     const handleNameBlur =event => {
@@ -28,7 +29,7 @@ const SignUp = () => {
     const [user,setUser] = useState([])
     //email password based sign Up
     const handleEmailPasswordSignUpClick = event => {
-        
+        emailPasswordSignUp(auth,email,password, name)
     }
     //Google based signup
     const handleGoogleSignUpClick = event => {
