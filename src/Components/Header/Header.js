@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import app from '../../firebase.init';
 
 const Header = () => {
-    const auth = getAuth(app)
-    
     return (
         <div>
             <nav className='flex justify-evenly p-7'>
@@ -19,16 +17,9 @@ const Header = () => {
                     <li><Link to='/manageitem'> Manage item </Link></li>
                     <li><Link to='/myitem'>My item</Link></li>
                     <li><Link to='/Blog'> Blog </Link></li>  
-                    {
-                        onAuthStateChanged( auth , (user) => {
-                            if(user){
-                                <Link to='/signin'><input type="button" value="Sign in" /></Link>
-                            }else{
-                                <Link to='/signout'><input type="button" value="Sign out" /></Link>    
-                            }
-                        })
-                    }
-                    <Link to='/signup'><input type="button" value="Sign up" /></Link>       
+                    <Link to='/signin'><input type="button" value="Sign in" /></Link>
+                    <Link to='/signout'><input type="button" value="Sign out" /></Link>    
+                    <Link to='/signup'><input type="button" value="Sign up" /></Link>
                 </ul>
             </nav>
 

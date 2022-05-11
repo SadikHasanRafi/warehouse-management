@@ -9,7 +9,9 @@ const SignIn = () => {
     //taking auth 
     const auth = getAuth(app)
 
-    const { handleEmailPasswordSignIn , handleGoogleSignIn } = useFirebase()
+    //firebase hook call
+    const {  googleSignIn } = useFirebase
+
 
     //Taking email input
     const [email,setEmail] = useState('') 
@@ -24,15 +26,14 @@ const SignIn = () => {
 
     //email password based sign in 
     const handleEmailPasswordClick = event => {
-        const user = handleEmailPasswordSignIn(auth, email, password)
+        
     }
  
 
     //Google authentication
     const [user,setUser] = useState([])
     const handleGoogleSignInClick = event => {
-        const result = handleGoogleSignIn();
-        setUser(result)
+        googleSignIn(auth)
     }
 
 

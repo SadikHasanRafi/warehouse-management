@@ -7,8 +7,9 @@ import useFirebase from '../Hook/useFirebase';
 
 const SignUp = () => {
 
-    const { handleEmailPasswordSignup, handleGoogleSignUp } = useFirebase()
-
+    const auth = getAuth(app)
+    const {  googleSignUp } = useFirebase()
+    
      //Taking name input
     const [name,setName] = useState('') 
     const handleNameBlur =event => {
@@ -26,17 +27,12 @@ const SignUp = () => {
     }
     const [user,setUser] = useState([])
     //email password based sign Up
-    const auth = getAuth(app);
     const handleEmailPasswordSignUpClick = event => {
-        const res = handleEmailPasswordSignup(auth, email, password)
-        console.log(res)
-        setUser(res)
+        
     }
     //Google based signup
     const handleGoogleSignUpClick = event => {
-        const result = handleGoogleSignUp();
-        console.log(result)
-        setUser(result)
+        googleSignUp(auth)
     }
           
   
