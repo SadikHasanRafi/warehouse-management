@@ -24,6 +24,7 @@ function App() {
         <Route path='myitem' element={<MyItem></MyItem>}></Route>
         <Route path='signin' element={<SignIn></SignIn>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
+        <Route path='signout' element={<SignUp></SignUp>}></Route>
         
         <Route path='*' element={<FourOfour></FourOfour>}></Route>
         <Route path='additem' element={<AddItem></AddItem>}></Route>

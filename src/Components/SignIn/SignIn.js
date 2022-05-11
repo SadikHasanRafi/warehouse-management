@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import app from '../../firebase.init';
+import useFirebase from '../Hook/useFirebase';
 
 
 const SignIn = () => {
+
+    //taking auth 
+    const auth = getAuth(app)
+
+    const { handleEmailPasswordSignIn , handleGoogleSignIn } = useFirebase()
 
     //Taking email input
     const [email,setEmail] = useState('') 
@@ -17,27 +23,19 @@ const SignIn = () => {
     }
 
     //email password based sign in 
-    const auth = getAuth(app);
     const handleEmailPasswordClick = event => {
-        // event.target.value === 'Sign In'
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user)
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode,errorMessage)
-        });
+        const user = handleEmailPasswordSignIn(auth, email, password)
     }
-    
-   
+ 
+
+    //Google authentication
+    const [user,setUser] = useState([])
+    const handleGoogleSignInClick = event => {
+        const result = handleGoogleSignIn();
+        setUser(result)
+    }
 
 
-
-    //gmail authentication
-    
 
 
     return (
@@ -49,7 +47,7 @@ const SignIn = () => {
 
             <p className='m-3'>OR</p>
 
-            <input type="button" value='Google sign in' className='bg-amber-500 p-3 text-white w-3/12'/>
+            <input type="button" onClick={handleGoogleSignInClick} value='Google sign in' className='bg-amber-500 p-3 text-white w-3/12'/>
             
         </div>
     );

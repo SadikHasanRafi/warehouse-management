@@ -1,10 +1,13 @@
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import app from '../../firebase.init';
-import useGoogleSignInSignUp from '../Hook/useGoogleSignInSignUp';
+import useFirebase from '../Hook/useFirebase';
+
 
 const SignUp = () => {
+
+    const { handleEmailPasswordSignup, handleGoogleSignUp } = useFirebase()
 
      //Taking name input
     const [name,setName] = useState('') 
@@ -21,47 +24,33 @@ const SignUp = () => {
     const handlePassworkBlur =event => {
         setPassword(event.target.value)
     }
-   
-
-
-
-
+    const [user,setUser] = useState([])
     //email password based sign Up
     const auth = getAuth(app);
-    const handleEmailPasswordSignUp = event => {
-        console.log(event.target.value)
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log(user)
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode,errorMessage)
-        });
-
-
-        //Google based signup
-        const [result,setResult] = useGoogleSignInSignUp([])
-        const handleGoogleSignUp = event => {
-            
-        }
-        
+    const handleEmailPasswordSignUpClick = event => {
+        const res = handleEmailPasswordSignup(auth, email, password)
+        console.log(res)
+        setUser(res)
     }
+    //Google based signup
+    const handleGoogleSignUpClick = event => {
+        const result = handleGoogleSignUp();
+        console.log(result)
+        setUser(result)
+    }
+          
+  
 
     return (
         <div className='flex flex-col justify-center items-center' style={{height: "60vh"}}>
             <input type="text" placeholder='Name' onBlur={handleNameBlur} className='p-3 border w-3/12'/>
             <input type="email" placeholder='Email' onBlur={handleEmailBlur} className='p-3 border w-3/12' />
             <input type="password" placeholder='Password'  onBlur={handlePassworkBlur} className='p-3 border w-3/12'/>
-            <input type="button" onClick={handleEmailPasswordSignUp} className='m-3 bg-green-500 p-3 text-white w-3/12' value="Sign Up" />
+            <input type="button" onClick={handleEmailPasswordSignUpClick} className='m-3 bg-green-500 p-3 text-white w-3/12' value="Sign Up" />
 
             <p className='m-3'>OR</p>
 
-            <input type="button" onClick={(handleGoogleSignUp)} value='Google sign up' className='bg-amber-500 p-3 text-white w-3/12'/>
+            <input type="button" onClick={(handleGoogleSignUpClick)} value='Google sign up' className='bg-amber-500 p-3 text-white w-3/12'/>
             
         </div>
     );
