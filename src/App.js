@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import AddItem from './Components/AddItem/AddItem';
 import Blog from './Components/Blog/Blog';
+import Footer from './Components/Footer/Footer';
 import FourOfour from './Components/FourOfour/FourOfour';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
@@ -24,7 +25,6 @@ function App() {
         <Route path='myitem' element={<MyItem></MyItem>}></Route>
         <Route path='signin' element={<SignIn></SignIn>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
-        <Route path='signout' element={<SignUp></SignUp>}></Route>
         
         <Route path='*' element={<FourOfour></FourOfour>}></Route>
         <Route path='additem' element={<AddItem></AddItem>}></Route>
@@ -37,6 +37,7 @@ function App() {
         <Route path='construction' element={<FourOfour></FourOfour>}></Route>
       </Routes>
       {/* update Item page is avaiable */}
+      <Footer></Footer>
       
     </div>
   );

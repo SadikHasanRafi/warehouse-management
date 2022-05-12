@@ -1,10 +1,23 @@
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import app from '../../firebase.init';
+import useFirebase from '../Hook/useFirebase';
 
 const Header = () => {
+
+    const {googleLogOut, user} = useFirebase()
+    const auth = getAuth(app)
+
+    // const [userName, setUserName] = useState('')
+    console.log(user.user)
+    
+    const handleSignOut = event => {
+        console.log('sign out')
+        googleLogOut(auth)
+    }
+
     return (
         <div>
             <nav className='flex justify-evenly p-7'>
@@ -17,9 +30,18 @@ const Header = () => {
                     <li><Link to='/manageitem'> Manage item </Link></li>
                     <li><Link to='/myitem'>My item</Link></li>
                     <li><Link to='/Blog'> Blog </Link></li>  
-                    <Link to='/signin'><input type="button" value="Sign in" /></Link>
-                    <Link to='/signout'><input type="button" value="Sign out" /></Link>    
-                    <Link to='/signup'><input type="button" value="Sign up" /></Link>
+                    <h1>{user.displayName}</h1>
+                    {
+                        
+                        user.displayName ?
+                        <button onClick={handleSignOut} >Sign out</button>       
+                        :
+                        <div>
+                            <Link to='/signin'><input type="button" value="Sign in" /></Link>
+                            <Link to='/signup'><input type="button" value="Sign up" /></Link>
+                        </div>
+                    }
+
                 </ul>
             </nav>
 

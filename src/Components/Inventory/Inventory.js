@@ -26,10 +26,10 @@ const Inventory = () => {
             <div className='grid grid-cols-3 gap-11'>
             {
                 //this comment must be removed
-                // productsWithSlice.map(product => <Product 
-                //     product = {product} 
-                //     key = {product._id}
-                //     ></Product>)
+                productsWithSlice.map(product => <Product 
+                    product = {product} 
+                    key = {product._id}
+                    ></Product>)
                 
             }
             </div>
