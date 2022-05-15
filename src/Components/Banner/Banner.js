@@ -14,7 +14,7 @@ const Banner = () => {
                 height: "80vh"}}>
                     <div className=' -backdrop-hue-rotate-60 bg-black/30 h-full w-full absolute '></div>
                     <div className='z-10 p-20 flex flex-col items-center'>
-                    <h1 className='font-mono text-7xl text-white'>Intel 13th Gen i9 12990k</h1>
+                    <h1 className='font-mono text-7xl text-white'>Intel 13th Gen i9 13990k</h1>
                     <h2 className='font-mono text-white text-5xl'>Up to <span className=''>6Ghz</span></h2>
                     <Link to="*"><button className='bg-black p-2 m-6 px-5 text-white text-xl '>Pre order</button></Link>
                     </div>

@@ -60,17 +60,17 @@ const UpdateProduct = () => {
     } 
 
     return (
-        <div>
-            <h1>this is update page</h1>
+        <div className='flex justify-center items-center mb-40 mt-40 flex-col'>
+            
             <img className='w-2/12' src={pic} alt="" />
             <p>{name}</p>
             <p>Quantity : {quantityProduct}</p>
             <form action="" onSubmit={handleAddedQuantity}>
-                <input type="text" id='addedValue' placeholder='Add quantity'/>
+                <input type="text" id='addedValue' className='mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1' placeholder='Add quantity'/>
                 <button type="submit">Add</button>
             </form>
             <form action="" onSubmit={handleReduceQuantity}>
-                <input type="text" id='reducedValue' placeholder='Reduce quantity'/>
+                <input type="text" className='mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md sm:text-sm focus:ring-1' id='reducedValue' placeholder='Reduce quantity'/>
                 <button type="submit">Reduce</button>
             </form>
             
